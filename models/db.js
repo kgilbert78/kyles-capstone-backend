@@ -16,14 +16,14 @@ const TextCredit = require("./TextCredit")(db);
     Site.hasMany(SoundEffect, {foreignKey: "siteID"});
     Site.hasMany(TextCredit, {foreignKey: "siteID"});
 
-    await db.sync({force: true}); // when adding columns: db.sync({force: true})
+    await db.sync(); // when adding columns: db.sync({force: true})
 
     const sites = await Site.findAll();
     if (sites.length===0){
         const newSite = await Site.create({
-            name: "Kyle",
+            name: "Capstone",
             text: "My first site",
-            credit: "Max",
+            credit: "Kyle",
             creditURL: "heroku.com",
             audioNarrationURL: "audio.mp3"});
 
