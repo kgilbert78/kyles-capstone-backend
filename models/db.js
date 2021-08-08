@@ -1,5 +1,15 @@
 const Sequelize = require("sequelize");
-const db = new Sequelize("postgres://kylegilbert@localhost:5432/walkumentarysyracusecic", {logging: false});
+
+let dbURL = process.env.DATABASE_URL;
+if (!dbURL) {
+  dbURL = "postgres://kylegilbert@localhost:5432/walkumentarysyracusecic";
+}
+
+const db = new Sequelize(dbURL, {
+  logging: false,
+  dialect: "postgres",
+  protocol: "postgres",
+ });
 
 const Site = require("./Site")(db);
 const Location = require("./Location")(db);
