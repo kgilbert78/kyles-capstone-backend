@@ -15,14 +15,8 @@ server.get("/sites", async (req,res) => {
         sites: await Site.findAll({
             include: [
                 {model: Photo},
-            ],
-            include: [
-                {model: Location}
-            ],
-            include: [
-                {model: SoundEffect}
-            ],
-            include: [
+                {model: Location},
+                {model: SoundEffect},
                 {model: TextCredit}
             ]
         })
@@ -35,6 +29,11 @@ server.get("/sites", async (req,res) => {
 //     res.send({googleMapsAPIKey});
 // });
 
-server.listen(3005, () => {
-    console.log("the server is listening on port 3005")
+let port = process.env.PORT;
+if (!port) {
+    port = 3005;
+};
+
+server.listen(port, () => {
+    console.log(`the server is listening on port ${port}`)
 });
