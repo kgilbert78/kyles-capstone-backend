@@ -1,15 +1,27 @@
 const Sequelize = require("sequelize");
 
+let db;
+
 let dbURL = process.env.DATABASE_URL;
 if (!dbURL) {
-  dbURL = "postgres://kylegilbert@localhost:5432/walkumentarysyracusecic";
+    db = new Sequelize("postgres://kylegilbert@localhost:5432/walkumentarysyracusecic", {
+        logging: false,
+        dialect: "postgres",
+        protocol: "postgres"
+    });
+} else {
+    db = new Sequelize(dbURL, {
+        logging: false,
+        dialect: "postgres",
+        protocol: "postgres",
+        dialectOptions: {
+            ssl: {
+            require: true,
+            rejectUnauthorized: false, // very important
+            }
+        }
+     });
 }
-
-const db = new Sequelize(dbURL, {
-  logging: false,
-  dialect: "postgres",
-  protocol: "postgres",
- });
 
 const Site = require("./Site")(db);
 const Location = require("./Location")(db);
