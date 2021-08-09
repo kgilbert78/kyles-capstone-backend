@@ -16,11 +16,11 @@ if (!dbURL) {
         protocol: "postgres",
         dialectOptions: {
             ssl: {
-            require: true,
-            rejectUnauthorized: false, // very important
+                require: true,
+                rejectUnauthorized: false, // very important
             }
         }
-     });
+    });
 }
 
 const Site = require("./Site")(db);
@@ -38,7 +38,7 @@ const TextCredit = require("./TextCredit")(db);
     Site.hasMany(SoundEffect, {foreignKey: "siteID"});
     Site.hasMany(TextCredit, {foreignKey: "siteID"});
 
-    await db.sync(); // when adding columns: db.sync({force: true})
+    await db.sync({force: true}); // when adding columns: db.sync({force: true})
 
     const sites = await Site.findAll();
     if (sites.length===0){
@@ -71,14 +71,16 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: newSite.siteID,
             name: "horse & carriage",
-            url: "audio/horseCarriage.mp3"
+            url: "audio/horseCarriage.mp3",
+            credit: "credit",
+            creditURL: "url"
         });
         
         await TextCredit.create({
             siteID: newSite.siteID,
             url: "google.com",
             credit: "credit",
-            creditURL: "url",
+            creditURL: "url"
         });
 
     };
