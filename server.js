@@ -10,17 +10,17 @@ server.get("/", (req, res) => {
     res.send({hello: "World!"});
 });
 
-server.get("/sites", async (req,res) => {
-    res.send({
-        sites: await Site.findAll({
-            include: [
-                {model: Photo},
-                {model: Location},
-                {model: SoundEffect},
-                {model: TextCredit}
-            ]
-        })
+server.get("/sites/:id", async (req,res) => {
+    let selectedSiteData = await Site.findAll({
+        where: {siteID: req.params.id},
+        include: [
+            {model: Photo},
+            {model: Location},
+            {model: SoundEffect},
+            {model: TextCredit}
+        ]
     });
+    res.send({selectedSiteData});
 });
 
 // server.post("/api", async (req, res) => {
