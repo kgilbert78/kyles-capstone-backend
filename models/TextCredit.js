@@ -8,7 +8,6 @@ module.exports = (db => {
             autoIncrement: true
         },
         siteID: DT.INTEGER,
-        url: DT.STRING,
         credit: DT.STRING,
         creditURL: DT.STRING,
     });

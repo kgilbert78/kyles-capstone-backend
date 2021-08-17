@@ -8,11 +8,11 @@ module.exports = (db => {
             autoIncrement: true
         },
         siteID: DT.INTEGER,
-        latForMapDisplay: DT.FLOAT,
-        lngForMapDisplay: DT.FLOAT,
-        latForGeolocation: DT.FLOAT,
-        lngForGeolocation: DT.FLOAT,
-        popUpDescription: DT.STRING,
+        latForMapDisplay: DT.DECIMAL,
+        lngForMapDisplay: DT.DECIMAL,
+        latForGeolocation: DT.DECIMAL,
+        lngForGeolocation: DT.DECIMAL,
+        popUpDescription: DT.TEXT,
         timesVisited: DT.INTEGER
     });
 });

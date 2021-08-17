@@ -9,9 +9,9 @@ module.exports = (db => {
         },
         siteID: DT.INTEGER,
         url: DT.STRING,
-        caption: DT.STRING,
+        caption: DT.TEXT,
         credit: DT.STRING,
         creditURL: DT.STRING,
-        altTag: DT.STRING
+        altTag: DT.TEXT
     });
 });

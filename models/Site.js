@@ -8,7 +8,7 @@ module.exports = (db => {
             autoIncrement: true
         },
         name: DT.STRING,
-        text: DT.STRING,
+        text: DT.TEXT,
         audioNarrationURL: DT.STRING
     });
 });
