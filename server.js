@@ -10,6 +10,13 @@ server.get("/", (req, res) => {
     res.send({hello: "World!"});
 });
 
+server.get("/sites/", async (req,res) => {
+    let siteData = await Site.findAll({
+        include: [ {model: Location} ]
+    });
+    res.send({siteData});
+});
+
 server.get("/sites/:id", async (req,res) => {
     let selectedSiteData = await Site.findAll({
         where: {siteID: req.params.id},
