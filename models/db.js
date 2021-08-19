@@ -92,7 +92,8 @@ const TextCredit = require("./TextCredit")(db);
 
         await SoundEffect.create({
             siteID: fayetteParkSitePage.siteID,
-            name: "Speech excerpt",
+            name: "Douglass Speech",
+            caption: "Hear an excerpt from Frederick Douglass' speech 'What to a Slave Is 4th of July?' by clicking the button above.",
             url: "/audio/frederickDouglass.mp3",
             credit: "James Earl Jones and Democracy Now",
             creditURL: "https://youtu.be/O0baE_CtU08?t=60"
@@ -100,6 +101,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: fayetteParkSitePage.siteID,
             name: "Horse & Carriage",
+            caption: "",
             url: "/audio/freeSoundCanadianHorseAndCarriage.mp3",
             credit: "vero.marengere",
             creditURL: "https://freesound.org/people/vero.marengere/sounds/450325/"
@@ -191,14 +193,16 @@ const TextCredit = require("./TextCredit")(db);
 
         await SoundEffect.create({
             siteID: cityHallSitePage.siteID,
-            name: "Speech excerpt",
+            name: "Gage Speech",
+            caption: "Hear an excerpt from the speech Matilda Joslyn Gage delivered here by clicking the button above.",
             url: "/audio/gageSpeech.mp3",
             credit: "Kyle Gilbert",
             creditURL: "https://susanb.org/wp-content/uploads/2018/12/Matilda-Joslyn-Gage-Syracuse-NY-1852.pdf"
         });
         await SoundEffect.create({
             siteID: cityHallSitePage.siteID,
-            name: "Steam Trains on Washington St. 1839-1936",
+            name: "Steam Trains",
+            caption: "Hear a steam train like those that ran down nearby Washington Street in the 1800s, by clicking the button above.",
             url: "/audio/freeSoundSteam2.mp3",
             credit: "gadzooks",
             creditURL: "https://freesound.org/people/gadzooks/sounds/39413/"
@@ -264,7 +268,8 @@ const TextCredit = require("./TextCredit")(db);
 
         await SoundEffect.create({
             siteID: georgeVashonSitePage.siteID,
-            name: "Vincent Oge Poem",
+            name: "Vashon's Poem",
+            caption: "Hear an excerpt from Goerge Boyer Vashon's poem 'Vincent Oge?' by clicking the button above.",
             url: "/audio/vincentOge.mp3",
             credit: "George Boyer Vashon, read by Kyle Gilbert",
             creditURL: "https://allpoetry.com/Vincent-Og"
@@ -272,6 +277,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: georgeVashonSitePage.siteID,
             name: "Horse & Carriage",
+            caption: "",
             url: "/audio/freeSoundCanadianHorseAndCarriage.mp3",
             credit: "vero.marengere",
             creditURL: "https://freesound.org/people/vero.marengere/sounds/450325/"
@@ -344,6 +350,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: jerryRescueSitePage.siteID,
             name: "Battering Ram",
+            caption: "Click the button above to hear a clip of a battering ram like the one used to break down the door of the building Jerry was being held in.",
             url: "/audio/bbcSoundEffectsBatteringRam.mp3",
             credit: "BBC Sound Effects",
             creditURL: "https://sound-effects.bbcrewind.co.uk/search?q=07022371"
@@ -351,6 +358,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: jerryRescueSitePage.siteID,
             name: "Angry Crowd",
+            caption: "",
             url: "/audio/freeSoundAngryCrowd.mp3",
             credit: "bevibeldesign",
             creditURL: "https://freesound.org/people/bevibeldesign/sounds/316640/"
