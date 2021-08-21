@@ -110,37 +110,37 @@ const TextCredit = require("./TextCredit")(db);
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "Historical Marker by Preserve New York",
-            creditURL: "https://www.hmdb.org/m.asp?m=138793"
+            url: "https://www.hmdb.org/m.asp?m=138793"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "Free Thought Trail",
-            creditURL: "https://freethought-trail.org/trail-map/location:fayette-park/"
+            url: "https://freethought-trail.org/trail-map/location:fayette-park/"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "Wikipedia",
-            creditURL: "https://en.wikipedia.org/wiki/Charles_Augustus_Wheaton"
+            url: "https://en.wikipedia.org/wiki/Charles_Augustus_Wheaton"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "Preservation Association of Central New York",
-            creditURL: "https://pacny.net/freedom_trail/birdseye_wheaton.htm"
+            url: "https://pacny.net/freedom_trail/birdseye_wheaton.htm"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "Mathew Powerrs and Clio Admin. 'Hamilton White House.' Clio: Your Guide to History. April 17, 2019",
-            creditURL: "https://theclio.com/entry/78574"
+            url: "https://theclio.com/entry/78574"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "The History Channel",
-            creditURL: "http://www.history.com/topics/black-history/frederick-douglass"
+            url: "http://www.history.com/topics/black-history/frederick-douglass"
         });
         await TextCredit.create({
             siteID: fayetteParkSitePage.siteID,
             credit: "The White House Historical Association",
-            creditURL: "https://www.whitehousehistory.org/frederick-douglass"
+            url: "https://www.whitehousehistory.org/frederick-douglass"
         }); 
 
         const cityHallSitePage = await Site.create({
@@ -211,27 +211,27 @@ const TextCredit = require("./TextCredit")(db);
         await TextCredit.create({
             siteID: cityHallSitePage.siteID,
             credit: "She Who Holds the Sky, by Sally Roesch Wagner",
-            creditURL: ""
+            url: ""
         });
         await TextCredit.create({
             siteID: cityHallSitePage.siteID,
             credit: "City of Syracuse",
-            creditURL: "http://www.syracuse.ny.us/History_of_City_Hall.aspx"
+            url: "http://www.syracuse.ny.us/History_of_City_Hall.aspx"
         });
         await TextCredit.create({
             siteID: cityHallSitePage.siteID,
             credit: "National Park Service: Susan B. Anthony",
-            creditURL: "https://www.nps.gov/people/susan-b-anthony.htm"
+            url: "https://www.nps.gov/people/susan-b-anthony.htm"
         });
         await TextCredit.create({
             siteID: cityHallSitePage.siteID,
             credit: "National Park Service: Elizatbeth Cady Stanton",
-            creditURL: "https://www.nps.gov/wori/learn/historyculture/elizabeth-cady-stanton.htm"
+            url: "https://www.nps.gov/wori/learn/historyculture/elizabeth-cady-stanton.htm"
         });
         await TextCredit.create({
             siteID: cityHallSitePage.siteID,
             credit: "Free Thought Trail",
-            creditURL: "https://freethought-trail.org/historical-events/event:national-womans-rights-convention-of-1852/"
+            url: "https://freethought-trail.org/historical-events/event:national-womans-rights-convention-of-1852/"
         }); 
 
         const georgeVashonSitePage = await Site.create({
@@ -269,7 +269,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: georgeVashonSitePage.siteID,
             name: "Vashon's Poem",
-            caption: "Hear an excerpt from Goerge Boyer Vashon's poem 'Vincent Oge?' by clicking the button above.",
+            caption: "Hear an excerpt from Goerge Boyer Vashon's poem 'Vincent Oge' by clicking the button above.",
             url: "/audio/vincentOge.mp3",
             credit: "George Boyer Vashon, read by Kyle Gilbert",
             creditURL: "https://allpoetry.com/Vincent-Og"
@@ -286,17 +286,17 @@ const TextCredit = require("./TextCredit")(db);
         await TextCredit.create({
             siteID: georgeVashonSitePage.siteID,
             credit: "AAREG (African American Registry)",
-            creditURL: "https://aaregistry.org/story/george-boyer-vashon-had-many-talents/"
+            url: "https://aaregistry.org/story/george-boyer-vashon-had-many-talents/"
         });
         await TextCredit.create({
             siteID: georgeVashonSitePage.siteID,
             credit: "Blackpast.org",
-            creditURL: "https://www.blackpast.org/african-american-history/vashon-george-b-1824-1878/"
+            url: "https://www.blackpast.org/african-american-history/vashon-george-b-1824-1878/"
         });
         await TextCredit.create({
             siteID: georgeVashonSitePage.siteID,
             credit: "Preservation Association of Central New York",
-            creditURL: "https://pacny.net/freedom_trail/Vashon.htm"
+            url: "https://pacny.net/freedom_trail/Vashon.htm"
         });
 
         const jerryRescueSitePage = await Site.create({
@@ -367,22 +367,22 @@ const TextCredit = require("./TextCredit")(db);
         await TextCredit.create({
             siteID: jerryRescueSitePage.siteID,
             credit: "Central New York: A Pictorial History, by Henry W. Schramm",
-            creditURL: ""
+            url: ""
         });
         await TextCredit.create({
             siteID: jerryRescueSitePage.siteID,
             credit: "Onondaga Historical Association",
-            creditURL: "https://www.cnyhistory.org/2014/10/jerry-rescue/"
+            url: "https://www.cnyhistory.org/2014/10/jerry-rescue/"
         });
         await TextCredit.create({
             siteID: jerryRescueSitePage.siteID,
             credit: "Syracuse Then and Now",
-            creditURL: "http://syracusethenandnow.org/Dwntwn/ClintonSq/JerryRescue.htm"
+            url: "http://syracusethenandnow.org/Dwntwn/ClintonSq/JerryRescue.htm"
         });
         await TextCredit.create({
             siteID: jerryRescueSitePage.siteID,
             credit: "Place of Memory",
-            creditURL: "https://motur.wordpress.com/2002/06/15/part-1-a-limited-history-of-black-identity-in-america/"
+            url: "https://motur.wordpress.com/2002/06/15/part-1-a-limited-history-of-black-identity-in-america/"
 
         });
     };

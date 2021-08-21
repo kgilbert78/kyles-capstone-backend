@@ -9,6 +9,6 @@ module.exports = (db => {
         },
         siteID: DT.INTEGER,
         credit: DT.STRING,
-        creditURL: DT.STRING,
+        url: DT.STRING,
     });
 });
