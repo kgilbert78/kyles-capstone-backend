@@ -87,9 +87,17 @@ const TextCredit = require("./TextCredit")(db);
             caption: "Home of Hamilton White",
             credit: "Doncram",
             creditURL: "https://commons.wikimedia.org/wiki/File:HamiltonWhiteHouse4sm.jpg",
-            altTag: "large brick greek revival home that belonged to Hamilton White﻿"
+            altTag: "large brick greek revival home that belonged to Hamilton White"
         });
 
+        await SoundEffect.create({
+            siteID: fayetteParkSitePage.siteID,
+            name: "Play Narration",
+            caption: "",
+            url: "/audio/fayetteParkNarration.mp3",
+            credit: "",
+            creditURL: ""
+        });
         await SoundEffect.create({
             siteID: fayetteParkSitePage.siteID,
             name: "Douglass Speech",
@@ -193,6 +201,14 @@ const TextCredit = require("./TextCredit")(db);
 
         await SoundEffect.create({
             siteID: cityHallSitePage.siteID,
+            name: "Play Narration",
+            caption: "",
+            url: "/audio/cityHallNarration.mp3",
+            credit: "",
+            creditURL: ""
+        });
+        await SoundEffect.create({
+            siteID: cityHallSitePage.siteID,
             name: "Gage Speech",
             caption: "Hear an excerpt from the speech Matilda Joslyn Gage delivered here by clicking the button above.",
             url: "/audio/gageSpeech.mp3",
@@ -266,6 +282,14 @@ const TextCredit = require("./TextCredit")(db);
             altTag: "Portrait of George Boyer Vashon"
         });
 
+        await SoundEffect.create({
+            siteID: georgeVashonSitePage.siteID,
+            name: "Play Narration",
+            caption: "",
+            url: "/audio/georgeVashonNarration.mp3",
+            credit: "",
+            creditURL: ""
+        });
         await SoundEffect.create({
             siteID: georgeVashonSitePage.siteID,
             name: "Vashon's Poem",
@@ -347,6 +371,14 @@ const TextCredit = require("./TextCredit")(db);
             altTag: "1888 photograph of a battering ram in front of a building in rural Ireland"
         });
 
+        await SoundEffect.create({
+            siteID: jerryRescueSitePage.siteID,
+            name: "Play Narration",
+            caption: "",
+            url: "/audio/jerryRescueNarration.mp3",
+            credit: "",
+            creditURL: ""
+        });
         await SoundEffect.create({
             siteID: jerryRescueSitePage.siteID,
             name: "Battering Ram",
