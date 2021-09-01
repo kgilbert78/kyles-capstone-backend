@@ -2,8 +2,6 @@ const server = require("express")();
 server.use(require("body-parser").json());
 server.use(require("cors")());
 
-// const googleMapsAPIKey = require("../apiKeys/googleMapsAPIKey");
-
 const {db, Site, Location, Photo, SoundEffect, TextCredit} = require("./models/db");
 
 server.get("/", (req, res) => {
@@ -12,7 +10,10 @@ server.get("/", (req, res) => {
 
 server.get("/sites/", async (req,res) => {
     let siteData = await Site.findAll({
-        include: [ {model: Location} ]
+        include: [ 
+            {model: Photo},
+            {model: Location}
+        ]
     });
     res.send({siteData});
 });
