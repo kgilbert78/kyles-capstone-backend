@@ -44,7 +44,7 @@ const TextCredit = require("./TextCredit")(db);
     if (sites.length === 0){
         const fayetteParkSitePage = await Site.create({
             name: "Fayette Park",
-            text: "<p mt-0>The area surrounding Fayette Park was home to several abolitionists, and the park and houses around it witnessed some significant events.</p><p>On Sunday, July 30, 1843, the great American orator and abolitionist Frederick Douglass spoke near the north side of the park, in front of the home of Stephen & Rosa Smith, who had invited him to speak there after they found out that he hadn’t been able to book a hall to speak in during his visit to Syracuse. His small audience grew to 500 by the afternoon. That evening the First Congregational Church offered Douglass and his audience a building to continue their activities for three more days. The speech on July 30 was one of many Douglass would give in Syracuse over the years, including another in Fayette Park in 1847.</p><p>Douglass had formerly been enslaved in Maryland, where he taught himself to read and write and then taught other enslaved Americans. He escaped slavery in 1838, and went on to become a prominent activist, starting an abolitionist newspaper in his new home of Rochester. He authored 5 books, the first of which was his famed autobiography, “Narrative of the Life of Frederick Douglass, an American Slave”. He became the first African-American to hold high office when he was appointed ambassador to Haiti in 1889, a position he held for two years. His advocacy for the rights of African-Americans and Women have been an inspiration to subsequent generations of people working for equality. You can hear a portion of his famous speech “What to the Slave is 4th of July?” by clicking the button.</p><p>Charles & Ellen Wheaton also lived on the north side of the park. Charles was a successful businessman and built the Wheaton Block on South Salina & Water Streets. In 1838 the Wheatons were part of a group that left the First Presbyterian Church to found the First Congregational Church, because the former refused to take an official position against slavery. Their home was a stop on the Underground Railroad from 1839 - 1847. Charles took an active stand against the 1850 Fugitive Slave Act, which required all US citizens to support the capture of those who had escaped enslavement even in the northern states where slavery was illegal. He was also part of a group of citizens who rescued William “Jerry” Henry, who had escaped slavery and was captured in Syracuse and jailed in a building that stood at what is now Clinton Square, which is another stop on this tour. Charles’ wife Ellen Birdseye Wheaton kept a diary from 1850 to her death in 1858, which was published in 1923. It details her family and social life as well as her reform activities, and includes comments on events in Syracuse’s abolitionist movement and the women’s rights movement.</p><p>Hamilton White and his wife Adelaide lived in the only home from that era that still stands today. It’s the large red brick Greek Revival mansion on the east side of the park, next to the church. White was a merchant and philanthropist who gave to many causes, including African-American churches and the Underground Railroad. He took a public stand against the Kansas-Nebraska Act in 1854, which expanded slavery in the west. His brother Horace is believed to have been directly involved in the Underground Railroad.</p>",
+            text: "<p mt-0>The area surrounding Fayette Park was home to several abolitionists, and the park and houses around it witnessed some significant events.</p><p>On Sunday, July 30, 1843, the great American orator and abolitionist Frederick Douglass spoke near the north side of the park, in front of the home of Stephen & Rosa Smith, who had invited him to speak there after they found out that he hadn’t been able to book a hall to speak in during his visit to Syracuse. His small audience grew to 500 by the afternoon. That evening the First Congregational Church offered Douglass and his audience a building to continue their activities for three more days. The speech on July 30 was one of many Douglass would give in Syracuse over the years, including another in Fayette Park in 1847.</p><p>Douglass had formerly been enslaved in Maryland, where he taught himself to read and write and then taught other enslaved Americans. He escaped slavery in 1838, and went on to become a prominent activist, starting an abolitionist newspaper in his new home of Rochester. He authored 5 books, the first of which was his famed autobiography, “Narrative of the Life of Frederick Douglass, an American Slave”. He became the first African-American to hold high office when he was appointed ambassador to Haiti in 1889, a position he held for two years. His advocacy for the rights of African-Americans and women have been an inspiration to subsequent generations of people working for equality. You can hear a portion of his famous speech “What to the Slave is 4th of July?” by clicking the button.</p><p>Charles & Ellen Wheaton also lived on the north side of the park. Charles was a successful businessman and built the Wheaton Block on South Salina & Water Streets. In 1838 the Wheatons were part of a group that left the First Presbyterian Church to found the First Congregational Church, because the former refused to take an official position against slavery. Their home was a stop on the Underground Railroad from 1839 - 1847. Charles took an active stand against the 1850 Fugitive Slave Act, which required all US citizens to support the capture of those who had escaped enslavement even in the northern states where slavery was illegal. He was also part of a group of citizens who rescued William “Jerry” Henry, who had escaped slavery and was captured in Syracuse and jailed in a building that stood at what is now Clinton Square, which is another stop on this tour. Charles’ wife Ellen Birdseye Wheaton kept a diary from 1850 to her death in 1858, which was published in 1923. It details her family and social life as well as her reform activities, and includes comments on events in Syracuse’s abolitionist movement and the women’s rights movement.</p><p>Hamilton White and his wife Adelaide lived in the only home from that era that still stands today. It’s the large red brick Greek Revival mansion on the east side of the park, next to the church. White was a merchant and philanthropist who gave to many causes, including African-American churches and the Underground Railroad. He took a public stand against the Kansas-Nebraska Act in 1854, which expanded slavery in the west. His brother Horace is believed to have been directly involved in the Underground Railroad.</p>",
             audioNarrationURL: "/audio/fayetteParkNarration.mp3"});
 
         await Location.create({
@@ -59,7 +59,7 @@ const TextCredit = require("./TextCredit")(db);
 
         await Photo.create({
             siteID: fayetteParkSitePage.siteID,
-            url: "https://s3.amazonaws.com/gs-waymarking-images/c0643fe2-93dc-48fa-98c9-2d56f43353aa.jpg",
+            url: "/images/fayetteParkToday.jpg",
             caption: "Fayette Park today",
             credit: "Waymarking",
             creditURL: "https://www.waymarking.com/gallery/image.aspx?f=1&guid=a2739476-4c13-4d23-b5ce-c01c2c14d85a",
@@ -176,16 +176,16 @@ const TextCredit = require("./TextCredit")(db);
         });
         await Photo.create({
             siteID: cityHallSitePage.siteID,
-            url: "https://syracuse_walking_tour.s3.amazonaws.com/uploads%2F1376582600741-4-Second-City-Hall-1895-%284%29.jpg",
-            caption: "The original City Hall building with the bell on the front porch before installation",
+            url: "/images/oldCityHallNoBell.jpg",
+            caption: "Original City Hall building",
             credit: "Onondaga Historical Association",
             creditURL: "https://www.cnyhistory.org/",
             altTag: "The original City Hall building with the bell on the front porch before installation"
         });
         await Photo.create({
             siteID: cityHallSitePage.siteID,
-            url: "https://syracuse_walking_tour.s3.amazonaws.com/uploads%2F1376582607504-5-Second-City-Hall-1895-%283%29.jpg",
-            caption: "The original City Hall building with the bell installed in the tower",
+            url: "/images/oldCityHallWithBell.jpg",
+            caption: "Original City Hall building",
             credit: "Onondaga Historical Association",
             creditURL: "https://www.cnyhistory.org/",
             altTag: "The original City Hall building with the bell installed in the tower"
@@ -193,7 +193,7 @@ const TextCredit = require("./TextCredit")(db);
         await Photo.create({
             siteID: cityHallSitePage.siteID,
             url: "/images/anthonyAndGage.jpg",
-            caption: "Susan B. Anthony (left) and Matilda Joslyn Gage (right)",
+            caption: "Anthony & Gage",
             credit: "Both images from Wikipedia, unknown author",
             creditURL: "https://en.wikipedia.org/wiki/Susan_B._Anthony#/media/File:SB_Anthony_from_RoRaWW.jpg", // https://commons.wikimedia.org/wiki/File:MatildaJoslynGage.jpeg
             altTag: "Portraits of Susan B. Anthony and Matilda Joslyn Gage"
@@ -268,15 +268,15 @@ const TextCredit = require("./TextCredit")(db);
         await Photo.create({
             siteID: georgeVashonSitePage.siteID,
             url: "/images/tempScreenshots/danaBlockScreenshot.png",
-            caption: "Building that housed George Boyer Vashon's law office on the second floor in the 1850s",
+            caption: "Vashon's 2nd floor office",
             credit: "",
             creditURL: "",
             altTag: "Building that housed George Boyer Vashon's law office on the second floor in the 1850s"
         });
         await Photo.create({
             siteID: georgeVashonSitePage.siteID,
-            url: "https://www.hmdb.org/Photos4/491/Photo491590o.jpg",
-            caption: "Portrait of George Boyer Vashon",
+            url: "/images/georgeVashon.jpg",
+            caption: "George Boyer Vashon",
             credit: "",
             creditURL: "",
             altTag: "Portrait of George Boyer Vashon"
@@ -293,7 +293,7 @@ const TextCredit = require("./TextCredit")(db);
         await SoundEffect.create({
             siteID: georgeVashonSitePage.siteID,
             name: "Vashon's Poem",
-            caption: "Hear an excerpt from Goerge Boyer Vashon's poem 'Vincent Oge' by clicking the button above.",
+            caption: "Hear an excerpt from George Boyer Vashon's poem 'Vincent Oge' by clicking the button above.",
             url: "/audio/vincentOge.mp3",
             credit: "George Boyer Vashon, read by Kyle Gilbert",
             creditURL: "https://allpoetry.com/Vincent-Og"
@@ -340,32 +340,32 @@ const TextCredit = require("./TextCredit")(db);
 
         await Photo.create({
             siteID: jerryRescueSitePage.siteID,
-            url: "https://s3.amazonaws.com/gs-waymarking-images/5caeb0a2-86c8-417d-a953-4e4eedd85a5b.jpg",
-            caption: "Jerry Rescue Monument, erected in 1990",
+            url: "/images/jerryRescueMonument.jpg",
+            caption: "Jerry Rescue Monument",
             credit: "",
             creditURL: "",
             altTag: "Jerry Rescue Monument"
         });
         await Photo.create({
             siteID: jerryRescueSitePage.siteID,
-            url: "/images/tempScreenshots/jerryRescueBldgScreenshot.png",
-            caption: "The 'Jerry Rescue building' in 1851 - the police station was on the ground floor of this Journal Building, across the street from Clinton Square.",
+            url: "/images/jerryRescueBldg.jpg",
+            caption: "Ground floor police station",
             credit: "",
             creditURL: "",
             altTag: "Newspaper illustration of the Jerry Rescue building in 1851"
         });
         await Photo.create({
             siteID: jerryRescueSitePage.siteID,
-            url: "http://syracusethenandnow.org/Dwntwn/ClintonSq/JerryRescueB/Townsend_Block_1897.jpg",
-            caption: "The Townsend Block, which contained the court where Jerry was first held.",
-            credit: "credit",
-            creditURL: "url",
+            url: "/images/townsendBlock1897.jpg",
+            caption: "Court where Jerry was held.",
+            credit: "",
+            creditURL: "",
             altTag: "Newspaper illustration of the Townsend Block in 1851"
         });
         await Photo.create({
             siteID: jerryRescueSitePage.siteID,
             url: "/images/batteringRam.jpg",
-            caption: "Example of a battering ram, Ireland 1888",
+            caption: "Battering ram, Ireland 1888",
             credit: "Robert French",
             creditURL: "https://picryl.com/media/the-battering-ram-has-done-its-work-23392381204-6a2a2e",
             altTag: "1888 photograph of a battering ram in front of a building in rural Ireland"
